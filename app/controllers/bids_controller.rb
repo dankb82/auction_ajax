@@ -4,7 +4,7 @@ class BidsController < ApplicationController
     @bid = Bid.new(bid_params)
 
     if @bid.save
-      redirect_to @bid.item, notice: 'Your bid has been recorded!'
+      @item = @bid.item
     else
       @item = @bid.item
       render "items/show"
