@@ -17,3 +17,9 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function() {
+  setInterval(function() {
+    $("#refresh-bid").load(location.href + " #refresh-bid");
+  }, 15000);
+});
